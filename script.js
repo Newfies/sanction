@@ -11,7 +11,7 @@ var autoInput = document.getElementById("toggleautoblank");
 
 // var title = document.title;
 var favicon = document.getElementById("favicon");
-var sb = document.getElementById("searchbox");
+var ss = document.getElementById("searchsubmit");
 var si = document.getElementById("searchinput");
 
 var g0 = document.getElementById("g0");
@@ -112,5 +112,43 @@ if (path == "https://newfies.github.io/sanction/g.html" || path == "file:///home
 
     g9.addEventListener("click", function () {
         alert("I'm Still Working On This, G's Will Be Worked On Soon, Sorry!");
+    });
+}
+
+/* Settings.html */
+if (path == "https://newfies.github.io/sanction/settings.html" || path == "file:///home/chronos/u-febd1ef60583f020a9b9f0e2761c8664438839f5/MyFiles/sanction/settings.html") {
+    titleInput.addEventListener("input", function () {
+        localStorage.setItem("Title", titleInput.value);
+        setTab();
+    });
+
+    faviconInput.addEventListener("input", function () {
+        localStorage.setItem("Favicon", faviconInput.value);
+        setTab();
+    });
+
+    autoInput.addEventListener("contextmenu", function (event) {
+        event.preventDefault();
+        alert("Hey, this is currently on the list of being developed. Check back soon.")
+    });
+
+    autoInput.addEventListener("click", function (event) {
+        if (autoInput.value == "Off") {
+            autoInput.value = "On"
+            autoInput.textContent = "On"
+            localStorage.setItem("autoblank", "on")
+        } else {
+            autoInput.value = "Off"
+            autoInput.textContent = "Off"
+            localStorage.setItem("autoblank", "off")
+        }
+    });
+}
+
+/* p.html */
+if (path == "https://newfies.github.io/sanction/p.html" || path == "file:///home/chronos/u-febd1ef60583f020a9b9f0e2761c8664438839f5/MyFiles/sanction/p.html") {
+    ss.addEventListener("click", function () {
+        input = si.value;
+        alert("progress: stored user input, " + input + " will be doing more with this soon.");
     });
 }

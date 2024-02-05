@@ -1,5 +1,7 @@
 # Sanction
+
+![Status](https://img.shields.io/badge/left-right-firebrick?labelColor=blue)
 Sanction is a new project I'm working on. update logs below!
 
 * Logs
-   * Planning to rename a.html to e.html (I changed "activities" to "extras")
+   * renamed a.html to extra.html

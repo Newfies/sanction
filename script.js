@@ -127,10 +127,7 @@ if (filename == "p.html") {
 /*  loadadobe.html */
 if (filename == "loadadobe.html") {
     const loadValue = new URLSearchParams(window.location.search).get('load');
-
-    // Check if loadValue is null or undefined
     if (loadValue === null || loadValue === undefined || loadValue === "") {
-        // If load is null or undefined, alert "Hello, World!"
         alert('You have nothing set to be loaded, redirecting you to the homepage...');
         window.location.assign("index.html")
     } else {

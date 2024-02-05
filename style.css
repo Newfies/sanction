@@ -1,0 +1,177 @@
+/* Color Recommendations */
+/* Note: First Color Is Darkest, Last One Is Lighest */
+/* Dark Color Scheme */
+/* 1A1A1A > 2E2E2E > 444444 */
+
+* {
+    user-select: none;
+    cursor: auto;
+    font-family: 'Ubuntu', sans-serif
+}
+
+body {
+    background-color: #1A1A1A;
+    color: white;
+    font-family: 'Ubuntu', sans-serif
+}
+
+/* Navigation Menu Configuration */
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    background-color: #2E2E2E;
+    border: 0.5px solid black;
+    border-radius: 6px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 12px;
+    text-align: center;
+    border-radius: 6px;
+}
+
+nav a:hover {
+    background-color: #444444;
+    cursor: pointer;
+}
+
+/* settings.html Configurations */
+
+.settings {
+    margin-top: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+    width: calc(100% - 30px);
+    height: 500px;
+    background-color: #2E2E2E;
+    border: 0.5px solid black;
+    border-radius: 6px;
+}
+
+.settings .container {
+    margin-top: 60px;
+    margin-left: 60px;
+}
+
+.title label,
+.favicon label,
+.autoblank label {
+    margin-right: 10px;
+    font-size: 24px;
+    display: inline-block;
+    width: 150px;
+}
+
+.title input,
+.favicon input,
+.autoblank button {
+    width: 200px;
+    height: 40px;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 6px;
+    background-color: #444444;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+
+}
+
+.autoblank button:active {
+    background-color: #696969;
+}
+
+/* .autoblank input {
+        outline: none;
+        border: 1px solid black;
+        border-radius: 6px;
+        background-color: #444444;
+        color: white;
+        padding: 10px;
+        font-size: 20px;
+        width: 20px;
+        height: 20px;
+    } */
+
+.settings div {
+    margin-top: 10px;
+}
+
+/* G */
+
+.rows {
+    display: flex;
+    margin-top: 30px;
+}
+
+.rows .rd {
+    height: 200px;
+    background-color: #2E2E2E;
+    border: 0.5px solid black;
+    border-radius: 6px;
+    margin-right: 20px;
+    margin-left: 20px;
+    width: calc(100% - 60px);
+
+}
+
+.rd img {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* P */
+
+.search {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.search .box {
+    display: inline-block;
+    margin: 0 auto;
+    margin-top: 200px;
+    text-align: center;
+    width: 600px;
+    height: 40px;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 6px;
+    background-color: #444444;
+    color: white;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.search .submit {
+    outline: none;
+    border: 1px solid black;
+    border-radius: 6px;
+    background-color: #444444;
+    color: white;
+    padding: 10px;
+    font-size: 22px;
+    height: 50px;
+    width: 150px;
+    text-align: center;
+    transition: ease-in 0.2s;
+}
+
+.search .submit:hover {
+    background-color: #555555;
+}
+
+.search .submit:active {
+    background-color: #696969;
+    border-radius: 8px;
+    transition: ease-out 0.2s;
+}

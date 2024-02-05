@@ -41,7 +41,7 @@ function setTab() {
 };
 
 /* Settings.html */
-if (path == "/sanction/settings.html" || path == "file:///home/chronos/u-febd1ef60583f020a9b9f0e2761c8664438839f5/MyFiles/sanction/settings.html") {
+if (path == "https://newfies.github.io/sanction/settings.html" || path == "file:///home/chronos/u-febd1ef60583f020a9b9f0e2761c8664438839f5/MyFiles/sanction/settings.html") {
     titleInput.addEventListener("input", function () {
         localStorage.setItem("Title", titleInput.value);
         setTab();
@@ -70,7 +70,8 @@ if (path == "/sanction/settings.html" || path == "file:///home/chronos/u-febd1ef
     });
 }
 
-if (path == "/sanction/g.html" || path == "file:///home/chronos/u-febd1ef60583f020a9b9f0e2761c8664438839f5/MyFiles/sanction/g.html") {
+/* g.html */
+if (path == "https://newfies.github.io/sanction/g.html" || path == "file:///home/chronos/u-febd1ef60583f020a9b9f0e2761c8664438839f5/MyFiles/sanction/g.html") {
     g0.addEventListener("click", function () {
         alert("I'm Still Working On This, G's Will Be Worked On Soon, Sorry!");
     });

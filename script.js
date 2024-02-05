@@ -63,11 +63,11 @@ if (path == "https://newfies.github.io/sanction/settings.html" || path == "file:
         if (autoInput.value == "Off") {
             autoInput.value = "On"
             autoInput.textContent = "On"
-            localStorage.setItem("autoblank", "on")
+            localStorage.setItem("autoblank", "On")
         } else {
             autoInput.value = "Off"
             autoInput.textContent = "Off"
-            localStorage.setItem("autoblank", "off")
+            localStorage.setItem("autoblank", "Off")
         }
     });
 }

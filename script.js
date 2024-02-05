@@ -75,7 +75,7 @@ if (path == "https://newfies.github.io/sanction/settings.html" || path == "file:
 /* g.html */
 if (path == "https://newfies.github.io/sanction/g.html" || path == "file:///home/chronos/u-febd1ef60583f020a9b9f0e2761c8664438839f5/MyFiles/sanction/g.html") {
     g0.addEventListener("click", function () {
-        alert("I'm Still Working On This, G's Will Be Worked On Soon, Sorry!");
+        window.location.assign("loadadobe.html")
     });
 
     g1.addEventListener("click", function () {

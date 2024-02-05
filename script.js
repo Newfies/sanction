@@ -26,6 +26,7 @@ var g8 = document.getElementById("g8");
 var g9 = document.getElementById("g9");
 
 const path = window.location;
+const filename = window.location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
 
 /* setTab */
 function setTab() {
@@ -43,7 +44,7 @@ function setTab() {
 };
 
 /* Settings.html */
-if (path == "https://newfies.github.io/sanction/settings.html" || path == "file:///home/chronos/u-febd1ef60583f020a9b9f0e2761c8664438839f5/MyFiles/sanction/settings.html") {
+if (filename == "settings.html") {
     titleInput.addEventListener("input", function () {
         localStorage.setItem("Title", titleInput.value);
         setTab();
@@ -73,9 +74,9 @@ if (path == "https://newfies.github.io/sanction/settings.html" || path == "file:
 }
 
 /* g.html */
-if (path == "https://newfies.github.io/sanction/g.html" || path == "file:///home/chronos/u-febd1ef60583f020a9b9f0e2761c8664438839f5/MyFiles/sanction/g.html") {
+if (filename == "g.html") {
     g0.addEventListener("click", function () {
-        window.location.assign("loadadobe.html")
+        window.location.assign("loadadobe.html?load=unfair")
     });
 
     g1.addEventListener("click", function () {
@@ -116,9 +117,23 @@ if (path == "https://newfies.github.io/sanction/g.html" || path == "file:///home
 }
 
 /* p.html */
-if (path == "https://newfies.github.io/sanction/p.html" || path == "file:///home/chronos/u-febd1ef60583f020a9b9f0e2761c8664438839f5/MyFiles/sanction/p.html") {
+if (filename == "p.html") {
     ss.addEventListener("click", function () {
         input = si.value;
         alert("progress: stored user input, " + input + " will be doing more with this soon.");
     });
+}
+
+/*  loadadobe.html */
+if (filename == "loadadobe.html") {
+    const loadValue = new URLSearchParams(window.location.search).get('load');
+
+    // Check if loadValue is null or undefined
+    if (loadValue === null || loadValue === undefined || loadValue === "") {
+        // If load is null or undefined, alert "Hello, World!"
+        alert('You have nothing set to be loaded, redirecting you to the homepage...');
+        window.location.assign("index.html")
+    } else {
+        x.setAttribute("src", "res/adobe/" + loadValue + ".swf");
+    }
 }

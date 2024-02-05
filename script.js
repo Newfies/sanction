@@ -11,6 +11,8 @@ var autoInput = document.getElementById("toggleautoblank");
 
 // var title = document.title;
 var favicon = document.getElementById("favicon");
+var sb = document.getElementById("searchbox");
+var si = document.getElementById("searchinput");
 
 var g0 = document.getElementById("g0");
 var g1 = document.getElementById("g1");

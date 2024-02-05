@@ -33,13 +33,15 @@
         </nav>
     </div>
 
-    <embed style="display: block; margin: 0 auto;" src="res/adobe/unfair.swf" type="application/x-shockwave-flash" id="advertisement">
+    <embed style="display: block; margin: 0 auto;" src="res/adobe/logo-anim.swf" type="application/x-shockwave-flash" id="advertisement">
 
     <script>
         window.onload = function() {
             var ad = document.getElementById("advertisement");
+            var load = "logo-anim"
             var width = 768;
             var height = 432;
+            ad.setAttribute("src", "res/adobe/" + load + ".swf")
             ad.style.width = width + "px";
             ad.style.height = height + "px";
         }

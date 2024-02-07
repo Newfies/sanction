@@ -43,6 +43,11 @@ function setTab() {
     }
 };
 
+/* Index.html */
+if (filename == "index.html" && localStorage.getItem("autoblank") == "On" {
+    alert("You have AutoBlank enabled, I plan to make this function soon!");
+}
+
 /* Settings.html */
 if (filename == "settings.html") {
     titleInput.addEventListener("input", function () {

@@ -44,7 +44,7 @@ function setTab() {
 };
 
 /* Index.html */
-if (filename == "index.html" && localStorage.getItem("autoblank") == "On" {
+if (filename == "index.html" && localStorage.getItem("autoblank") == "On") {
     alert("You have AutoBlank enabled, I plan to make this function soon!");
 }
 

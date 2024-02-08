@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
 var titleInput = document.getElementById('settitle');
 var faviconInput = document.getElementById('setfavicon');
 var autoInput = document.getElementById("toggleautoblank");
+var pwxyzInput = document.getElementById("selectpwxyz");
 
 var favicon = document.getElementById("favicon");
 var ss = document.getElementById("searchsubmit");
@@ -36,14 +37,18 @@ function setTab() {
     }
 
     if (localStorage.getItem("Favicon") == null || localStorage.getItem("Favicon") == undefined || localStorage.getItem("Favicon") == "/r") {
-        localStorage.removeItem("Favicon")
+        localStorage.removeItem("Favicon");
     } else {
         favicon.setAttribute("href", localStorage.getItem("Favicon"));
+    }
+
+    if (localStorage.getItem("Pwxyz") == null || localStorage.getItem("Pwxyz") == undefined) {
+        localStorage.removeItem("Pwxyz");
     }
 };
 
 /* Index.html */
-if (filename == "index.html" && localStorage.getItem("autoblank") == "On") {
+if (filename == "index.html" && localStorage.getItem("Autoblank") == "On") {
     alert("You have AutoBlank enabled, I plan to make this function soon!");
 }
 
@@ -59,9 +64,9 @@ if (filename == "settings.html") {
         setTab();
     });
 
-    if (localStorage.getItem("autoblank")) {
-        autoInput.value = localStorage.getItem("autoblank");
-        autoInput.textContent = localStorage.getItem("autoblank");
+    if (localStorage.getItem("Autoblank")) {
+        autoInput.value = localStorage.getItem("Autoblank");
+        autoInput.textContent = localStorage.getItem("Autoblank");
     } else {
         autoInput.value = "Off";
         autoInput.textContent = "Off";
@@ -71,12 +76,21 @@ if (filename == "settings.html") {
         if (autoInput.value == "Off") {
             autoInput.value = "On"
             autoInput.textContent = "On"
-            localStorage.setItem("autoblank", "On")
+            localStorage.setItem("Autoblank", "On")
         } else {
             autoInput.value = "Off"
             autoInput.textContent = "Off"
-            localStorage.setItem("autoblank", "Off")
+            localStorage.setItem("Autoblank", "Off")
         }
+    });
+
+    pwxyzInput.addEventListener("change", function(event) {
+        if (pwxyzInput.value != "0"){
+            var zero = document.getElementById("p0");
+            zero.disabled = true;
+        }
+        localStorage.setItem("Pwxyz", pwxyzInput.value);
+        alert(pwxyzInput.value);
     });
 }
 
@@ -127,7 +141,19 @@ if (filename == "g.html") {
 if (filename == "p.html") {
     ss.addEventListener("click", function () {
         input = si.value;
-        alert("progress: stored user input, " + input + " will be doing more with this soon.");
+
+        if (localStorage.getItem("Pwxyz") == "1"){
+            if (input.startsWith("https://")){
+                window.location.assign("https://4ad8fed5-a626-47f4-88f0-d3fc514bbe79-00-1ikq99tzti8eh.kirk.replit.dev/main/" + input)
+            } else {
+                alert("no https, 1")
+            }
+        }
+
+        //if (input.startsWith("https://")) {
+            
+        
+        // alert("progress: stored user input, " + input + " will be doing more with this soon.");
     });
 }
 

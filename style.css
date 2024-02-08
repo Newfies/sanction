@@ -60,7 +60,8 @@ nav a:hover {
 
 .title label,
 .favicon label,
-.autoblank label {
+.autoblank label,
+.pwxyz label {
     margin-right: 10px;
     font-size: 24px;
     display: inline-block;
@@ -81,6 +82,22 @@ nav a:hover {
     font-size: 20px;
 
 }
+
+.pwxyz select {
+    width: 200px;
+    height: 40px;
+    outline: none;
+    border: 1px solid black;
+    border-radius: 6px;
+    background-color: #444444;
+    color: white;
+    padding: 6px;
+    font-size: 20px;
+    text-align: center;
+
+}
+
+
 
 .autoblank button:active {
     background-color: #696969;
@@ -174,4 +191,9 @@ nav a:hover {
     background-color: #696969;
     border-radius: 8px;
     transition: ease-out 0.2s;
+}
+
+/* Pwxyz Button */
+#p2 {
+    
 }

@@ -9,7 +9,6 @@ var titleInput = document.getElementById('settitle');
 var faviconInput = document.getElementById('setfavicon');
 var autoInput = document.getElementById("toggleautoblank");
 
-// var title = document.title;
 var favicon = document.getElementById("favicon");
 var ss = document.getElementById("searchsubmit");
 var si = document.getElementById("searchinput");
@@ -44,7 +43,7 @@ function setTab() {
 };
 
 /* Index.html */
-if (filename == "index.html" && localStorage.getItem("autoblank") == "On" {
+if (filename == "index.html" && localStorage.getItem("autoblank") == "On") {
     alert("You have AutoBlank enabled, I plan to make this function soon!");
 }
 
@@ -60,10 +59,13 @@ if (filename == "settings.html") {
         setTab();
     });
 
-    autoInput.addEventListener("contextmenu", function (event) {
-        event.preventDefault();
-        alert("Hey, this is currently on the list of being developed. Check back soon.")
-    });
+    if (localStorage.getItem("autoblank")) {
+        autoInput.value = localStorage.getItem("autoblank");
+        autoInput.textContent = localStorage.getItem("autoblank");
+    } else {
+        autoInput.value = "Off";
+        autoInput.textContent = "Off";
+    }
 
     autoInput.addEventListener("click", function (event) {
         if (autoInput.value == "Off") {
